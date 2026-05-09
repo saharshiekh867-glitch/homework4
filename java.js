@@ -7,11 +7,11 @@
  Description: MIS 3371 Homework 4 Patient Form JS
 */
  
-// show today's date
+// displays today date
 const d = new Date();
 document.getElementById("today") && (document.getElementById("today").innerHTML = d.toLocaleDateString());
  
-// slider for how sick the patient feels
+// slider 
 let slider = document.getElementById("salary");
 let output = document.getElementById("salaryDisplay");
 if (slider && output) {
@@ -19,7 +19,7 @@ if (slider && output) {
     slider.oninput = function() { output.innerHTML = this.value; };
 }
  
-// first name validation
+// first name validating
 function validateFirstName() {
     fname = document.getElementById("firstName").value.trim();
     var namePattern = /^[a-zA-Z'-]+$/;
@@ -41,7 +41,7 @@ function validateFirstName() {
     }
 }
  
-// last name validation
+// the last name validation
 function validateLastName() {
     lname = document.getElementById("lastName").value.trim();
     var namePattern = /^[a-zA-Z'-]+$/;
@@ -63,7 +63,7 @@ function validateLastName() {
     }
 }
  
-// middle initial validation
+//  the middle initial validation
 function validateMiddleInitial() {
     mini = document.getElementById("middleInitial").value;
     var namePattern = /^[A-Za-z]$/;
@@ -81,7 +81,7 @@ function validateMiddleInitial() {
     }
 }
  
-// date of birth validation
+// DOBS validation
 function validateDOB() {
     var mm = document.getElementById("dobMonth").value.trim();
     var dd = document.getElementById("dobDay").value.trim();
@@ -112,7 +112,7 @@ function validateDOB() {
     return true;
 }
  
-// ssn validation
+// social security  validation
 function validateSSN() {
     const ssn = document.getElementById("ssn").value;
     const ssnR = /^[0-9]{3}-?[0-9]{2}-?[0-9]{4}$/;
@@ -126,7 +126,7 @@ function validateSSN() {
     }
 }
  
-// address validation
+// addy validation
 function validateAddr1() {
     var ad1 = document.getElementById("addr1").value;
     console.log(ad1);
@@ -141,7 +141,7 @@ function validateAddr1() {
     }
 }
  
-// city validation
+// which city validation
 function validateCity() {
     const city = document.getElementById("city");
     if (!city) return true;
@@ -154,7 +154,7 @@ function validateCity() {
     return true;
 }
  
-// state validation
+// the state validation
 function validateState() {
     var val = document.getElementById("state").value;
     if (val == "") {
@@ -165,7 +165,7 @@ function validateState() {
     return true;
 }
  
-// zip code validation
+// zip code validation if it works 
 function validateZip() {
     const zipInput = document.getElementById("zip");
     if (!zipInput) return false;
